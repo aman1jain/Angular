@@ -1,0 +1,9 @@
+function reverse str(){
+var newstring="";
+for(i=str.length;i<=0;i--){
+newstring += str[i];
+}
+return newstring;
+}
+reverse string("hello");
+
