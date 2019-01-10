@@ -1,0 +1,80 @@
+
+<h2>Edit User</h2>
+<div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <div class="card centered">
+          <div class="card-body">
+              <!-- <form [formGroup]="angForm" novalidate> -->
+<!-- <form [formGroup]="Form" novalidate> -->
+        <form [formGroup]='Form' (submit)="updateAdUnit()">
+
+     
+        <div class="form-group">
+
+                <label>Student ID</label>
+        <input type="text" formControlName="studentid" name="studentid" class="form-control"
+        [ngClass]="{ 'is-invalid': Form.get('studentid').touched && Form.get('studentid').invalid}"/>
+                
+                <div class="invalid-feedback">
+                        <div>Student ID is required</div>
+                </div>
+            </div>
+
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" name="firstName" class="form-control" [ngClass]="{ 'is-invalid': Form.get('firstName').touched && Form.get('firstName').invalid}" /> 
+    </div>
+   
+ 
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" formControlName="lastName" name="lastName" class="form-control" [ngClass]="{ 'is-invalid': Form.get('lastName').touched && Form.get('lastName').invalid}" />
+            <div class="invalid-feedback">
+                    <div>Last Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+           
+            <label>Gender</label>
+              <div class="form-control">
+                <label class="radio-inline">
+                <input type="radio" formControlName="gender" value="M" name="gender">Male
+                </label>
+                <label class="radio-inline">
+                <input type="radio" formControlName="gender" value="F" name="gender">Female
+    
+                </label>
+    </div>
+      
+          </div>
+    
+        <div class="form-group"> 
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': Form.get('email').touched && Form.get('email').invalid}" />
+            <div *ngIf="Form.get('email').touched && Form.get('email').invalid" class="invalid-feedback">
+                    <div *ngIf="Form.get('email').errors.required">Email is required</div>
+                    <div *ngIf="Form.get('email').errors.email">Email must be a valid email address</div>
+                </div>
+        </div>
+  
+  
+   
+    <div class="form-group">
+        <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+        <button type = "submit" class="btn btn-success">Update</button>
+            <!-- <button [disabled]="!registerForm.valid" class="btn btn-primary">Register</button> -->
+            <!-- <button (click)="updateAdUnit(firstName.value,lastName.value,gender.value,email.value)"  -->
+            <!-- [disabled]="Form.invalid" class="btn btn-primary">Update Unit</button> -->
+        <!-- <button [disabled]="!Form.valid" class="btn btn-primary">Update</button>  -->
+  
+    </div> 
+</form>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+ 

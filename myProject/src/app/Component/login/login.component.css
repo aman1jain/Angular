@@ -1,0 +1,20 @@
+/* @import "~bootstrap/dist/css/bootstrap.css";  */
+.centered {
+    height: 80%;
+   margin: 0 auto;
+    margin-top: 10%;
+    /* text-align: center; */
+   }
+   .card{
+       padding: 20px;
+   }
+   .centered-form {
+     height: 80%;
+    margin: 0 auto;
+     margin-top: 10%;
+     
+    }
+    .centered-text{
+    
+      text-align: center;
+    }  
