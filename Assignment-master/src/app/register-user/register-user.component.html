@@ -1,0 +1,33 @@
+<div class="centered-text">
+  <h2>Add New user</h2>
+</div>
+
+<div class="card centered-form">
+<form  
+  #uForm="ngForm" (ngSubmit)="onSubmit(uForm.value)">
+  
+  <div class="form-group">
+      <label for="exampleInputEmail1">Enter Name </label>
+      <input type="text" class="form-control"   placeholder=" Name" name="uname" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter Email </label>
+        <input type="email" class="form-control"  placeholder=" email" name="uemail" ngModel>
+      </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter Phone Numberass </label>
+        <input type="number" class="form-control"  placeholder=" Phone Number" name="uphone" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="exampleInputPassword1">Enter New Password</label>
+          <input type="password" class="form-control"  placeholder="Password" name="upassword" ngModel>
+        </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Confirm Password</label>
+    <input type="password" class="form-control"  placeholder="Confirm Password" name="confPass" ngModel>
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary ">Save</button>
+</form>
+</div>

@@ -1,0 +1,47 @@
+<div class="centered-text">
+  <h2>All Users</h2>
+  <hr>
+
+</div>
+<table class="table table-borderless">
+    <thead class="thead-dark">
+      <tr>
+       
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of result">
+        <td>{{user.uname}}</td>
+        <td>{{user.uemail}}</td>
+        <td>{{user.uphone}}</td>
+        <button type="button" class="btn btn-danger" (click)="removeUser()">Delete</button>
+      </tr>
+      <!-- <tr>
+        <th scope="row">1</th>
+        <td>Siddharth</td>
+        <td>Siddharth@contactme.com</td>
+        <td>7878787878</td>
+        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+      </tr>
+      <tr>
+          <th scope="row">2</th>
+          <td>Siddharth</td>
+          <td>Siddharth@contactme.com</td>
+          <td>7878787878</td>
+          <button type="button" class="btn btn-danger btn-sm">Delete</button>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Siddharth</td>
+            <td>Siddharth@contactme.com</td>
+            <td>7878787878</td>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </tr> -->
+    </tbody>
+  </table>
+  
+  

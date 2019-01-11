@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.centered {
+   height: 100%;
+  margin: 0 auto;
+   margin-top: 10%;
+   text-align: center;
+  }
+  .card{
+      padding: 20px;
+  }
+  .centered-form {
+    height: 100%;
+   margin: 0 auto;
+    margin-top: 2%;
+    
+   }
+   .centered-text{
+   
+     text-align: center;
+   }
